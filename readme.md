@@ -26,7 +26,7 @@ To know address of functions we can do it in many ways. A couple of them are:<br
 <b><li>Arwin.</b> c:\> arwin user32.dll MessageBoxA </li
 </ol>
   
-<h2>How does all this work?</h2>
+How does all this work?
 To call a function the process is:<p>
 <ul>
 <li>Load user32.dll library</li>

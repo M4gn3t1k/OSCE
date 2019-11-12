@@ -39,25 +39,25 @@ A library has its base address and each function is available at a static offset
 
 <h2>Getting our hands dirty...</h2>
 Now we are going to create a shellcode from the scratch. An easy example to start with!<p>
-We will launch a calc.exe application and will use WinExec() and ExitProcess() functions.
+We will launch a calc.exe application and will use WinExec() and ExitProcess() functions.<p>
 To know addresses of both functions: <p>
-  <ul><list>arwin kernel32.dll WinExec</list>
-    <list>arwin kernel32.dll ExitProcess</list>
+  <ul><list>arwin kernel32.dll WinExec</list><p>
+    <list>arwin kernel32.dll ExitProcess</list><p>
     </ul>
   
   <i>
-  BITS 32
-  global _start
+  BITS 32<p>
+  global _start<p>
   
-  xor ebx, ebx
-  push ebx; null-termination
-  push 0x6578652e; "exe." in hex and endianness 
-  push 0x636c6163: "clac" in hex and endianness
-  mov ecx, esp
-  push 1
-  push ecx
-  mov ebx, 0x77e484c6; push address of WinExec
-  call ebx; call WinExec()
+  xor ebx, ebx<p>
+  push ebx; null-termination<p>
+  push 0x6578652e; "exe." in hex and endianness <p>
+  push 0x636c6163: "clac" in hex and endianness<p>
+  mov ecx, esp<p>
+  push 1<p>
+  push ecx<p>
+  mov ebx, 0x77e484c6; push address of WinExec<p>
+  call ebx; call WinExec()<p>
   
   </i>
 

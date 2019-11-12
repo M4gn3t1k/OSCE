@@ -23,10 +23,10 @@ Is the same as programming languages: firstly you call the library to secondly c
 To know address of functions we can do it in many ways. A couple of them are:<br>
 
 <ol><b><li>Immunity Debugger.</b> <b>Attach</b> the binary, <b>View</b> - <b>Executable Modules </b>- Select DLL we want, right click and <b>View names</b><br></li>
-<b><li>Arwin.</b> c:\> arwin user32.dll MessageBoxA </li
+<b><li>Arwin.</b> c:\> arwin user32.dll MessageBoxA </li>
 </ol>
   
-How does all this work?
+<h2>How does all this work?</h2>
 To call a function the process is:<p>
 <ul>
 <li>Load user32.dll library</li>

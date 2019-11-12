@@ -19,3 +19,4 @@
 <H1>Windows Exploiting</H1>
 - <b>Arwin.</b> To know <br>
 - <b>Python27.</b> Add to environment variables "Path" c:\Python27<br>
+- <b>bin2sc.py.</b> Script to extract hexadecimal opcodes from binary.

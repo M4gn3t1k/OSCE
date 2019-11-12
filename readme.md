@@ -21,16 +21,17 @@ Dynamic Link Libraries, are files that contain functions. If we have a binary th
 Is the same as programming languages: firstly you call the library to secondly call functions of that library.<p>
 
 To know address of functions we can do it in many ways. A couple of them are:<br>
-  <ol><b><li>Immunity Debugger.</b> <b>Attach</b> the binary, <b>View</b> - <b>Executable Modules </b>- Select DLL we want, right click and <b>View names</b><br></li>
-  <b><li>Arwin.</b> c:\> arwin user32.dll MessageBoxA </li
-  </ol>
+
+<ol><b><li>Immunity Debugger.</b> <b>Attach</b> the binary, <b>View</b> - <b>Executable Modules </b>- Select DLL we want, right click and <b>View names</b><br></li>
+<b><li>Arwin.</b> c:\> arwin user32.dll MessageBoxA </li
+</ol>
   
 <h2>How does all this work?</h2>
 To call a function the process is:<p>
-  <ul>
-    <li>Load user32.dll library</li>
-    <li>Call MessageBoxA with its arguments</li>
-  </ul>
+<ul>
+<li>Load user32.dll library</li>
+<li>Call MessageBoxA with its arguments</li>
+</ul>
 There is an important thing to say: the presence of ASLR (explained later) will change how all this works. If we are working in an OS where the addresses are static the things are much more easy than if ASLR is ON (in Linux systems we can bypass ASLR, but in Windows is more difficult).<p>
   
 A library has its base address and each function is available at a static offset from the library base address.  

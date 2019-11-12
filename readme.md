@@ -16,7 +16,18 @@
 <a href=""></a>
 <a href=""></a>
 
-<H1>Windows Exploiting</H1>
+<H1>Windows Shellcoding</H1>
 - <b>Arwin.</b> To know <br>
 - <b>Python27.</b> Add to environment variables "Path" c:\Python27<br>
 - <b>bin2sc.py.</b> Script to extract hexadecimal opcodes from binary.
+
+<h2>WinAPI</h2>
+WinAPI is a set of functions stored in default system DLLs. They allow users to use OS functionalities.
+
+<b>What are DLLs?</b>
+Dynamic Link Libraries, are files that contain functions. If we have a binary that makes use of these functions, the application needs to load that DLL to addresses in memory.<b>
+
+Is the same as programming languages: firstly you call the library to secondly call functions of that library.
+
+
+

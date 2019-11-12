@@ -11,6 +11,7 @@ Here I put the steps I'm doing to prepare XDS/OSCE certification. My time is lim
 - <b>Arwin.</b> To know address of functions from DLLs.<br>
 - <b>Python27.</b> Add to environment variables "Path" c:\Python27<br>
 - <b>bin2sc.py.</b> Script to extract hexadecimal opcodes from binary.
+- <b>shellcodeTest.c.</b> C script to execute a shellcode.
 
 <h2>WinAPI</h2>
 WinAPI is a set of functions stored in default system DLLs. They allow users to use OS functionalities.
@@ -35,7 +36,29 @@ To call a function the process is:<p>
 There is an important thing to say: the presence of ASLR (explained later) will change how all this works. If we are working in an OS where the addresses are static the things are much more easy than if ASLR is ON (in Linux systems we can bypass ASLR, but in Windows is more difficult).<p>
   
 A library has its base address and each function is available at a static offset from the library base address.  
+
+<h2>Getting our hands dirty...</h2>
+Now we are going to create a shellcode from the scratch. An easy example to start with!<p>
+We will launch a calc.exe application and will use WinExec() and ExitProcess() functions.
+To know addresses of both functions: <p>
+  <ul><list>arwin kernel32.dll WinExec</list>
+    <list>arwin kernel32.dll ExitProcess</list>
+    </ul>
   
+  <i>
+  BITS 32
+  global _start
   
+  xor ebx, ebx
+  push ebx; null-termination
+  push 0x6578652e; "exe." in hex and endianness 
+  push 0x636c6163: "clac" in hex and endianness
+  mov ecx, esp
+  push 1
+  push ecx
+  mov ebx, 0x77e484c6; push address of WinExec
+  call ebx; call WinExec()
   
+  </i>
+
   

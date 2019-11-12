@@ -15,3 +15,7 @@
 <a href=""></a>
 <a href=""></a>
 <a href=""></a>
+
+<H1>Windows Exploiting</H1>
+- Arwin. To know <br>
+- Python27. Add to environment variables "Path" c:\Python27<br>

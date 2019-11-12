@@ -60,4 +60,6 @@ To know addresses of both functions: <p>
   call ebx; call WinExec()<p>
    </i>
 
-  
+<b>Nevertheless...</b> in this example we have hardcoded addresses, this means that if we run this binary in other systems won't work.
+What can we do in order to make this work?
+

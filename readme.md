@@ -30,7 +30,7 @@ Dynamic Link Libraries, are files that contain functions. If we have a binary th
 Is the same as programming languages: firstly you call the library to secondly call functions of that library.<p>
 
 To know address of functions we can do it in many ways. A couple of them are:<br>
-  <ol><li><b>1. Immunity Debugger.</b> <b>Attach</b> the binary, <b>View</b> - <b>Executable Modules </b>- Select DLL we want, right click and <b>View names</b><br></li>
-  <li><b>2. Arwin.</b> c:\> arwin user32.dll MessageBoxA </li
+  <ol><b><li>Immunity Debugger.</b> <b>Attach</b> the binary, <b>View</b> - <b>Executable Modules </b>- Select DLL we want, right click and <b>View names</b><br></li>
+  <b><li>Arwin.</b> c:\> arwin user32.dll MessageBoxA </li
   </ol>
 

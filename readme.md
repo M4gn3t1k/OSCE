@@ -49,8 +49,8 @@ To know addresses of both functions: <p>
   BITS 32<p>
   global _start<p>
   
-  xor ebx, ebx<p>
-  push ebx; null-termination<p>
+  xor ebx, ebx<br>
+  push ebx; null-termination<br>
   push 0x6578652e; "exe." in hex and endianness <p>
   push 0x636c6163: "clac" in hex and endianness<p>
   mov ecx, esp<p>

@@ -46,19 +46,18 @@ To know addresses of both functions: <p>
     </ul>
   
   <i>
-  BITS 32<p>
-  global _start<p>
+  BITS 32<br>
+  global _start<br>
   
   xor ebx, ebx<br>
   push ebx; null-termination<br>
-  push 0x6578652e; "exe." in hex and endianness <p>
-  push 0x636c6163: "clac" in hex and endianness<p>
-  mov ecx, esp<p>
-  push 1<p>
-  push ecx<p>
-  mov ebx, 0x77e484c6; push address of WinExec<p>
+  push 0x6578652e; "exe." in hex and endianness<br>
+  push 0x636c6163: "clac" in hex and endianness<br>
+  mov ecx, esp<br>
+  push 1<br>
+  push ecx<br>
+  mov ebx, 0x77e484c6; push address of WinExec<br>
   call ebx; call WinExec()<p>
-  
-  </i>
+   </i>
 
   

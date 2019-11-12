@@ -31,9 +31,9 @@ To call a function the process is:<p>
     <li>Load user32.dll library</li>
     <li>Call MessageBoxA with its arguments</li>
   </ul>
- There is an important thing to say: the presence of ASLR (explained later) will change how all this works. If we are working in an OS where the addresses are static the things are much more easy than if ASLR is ON (in Linux systems we can bypass ASLR, but in Windows is more difficult).<p>
+There is an important thing to say: the presence of ASLR (explained later) will change how all this works. If we are working in an OS where the addresses are static the things are much more easy than if ASLR is ON (in Linux systems we can bypass ASLR, but in Windows is more difficult).<p>
   
-  
+A library has its base address and each function is available at a static offset from the library base address.  
   
   
   

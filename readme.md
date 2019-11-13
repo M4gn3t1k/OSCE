@@ -45,6 +45,7 @@ To know addresses of both functions: <p>
     <list>arwin kernel32.dll ExitProcess</list><p>
     </ul>
   
+  <h3>The assembly code will be something like:</h3>  
   <i>
   BITS 32<br>
   global _start<br>

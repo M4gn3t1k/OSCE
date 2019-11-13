@@ -56,10 +56,20 @@ To know addresses of both functions: <p>
   mov ecx, esp<br>
   push 1<br>
   push ecx<br>
-  mov ebx, 0x77e484c6; push address of WinExec<br>
-  call ebx; call WinExec()<p>
+  mov ebx, 0x77e484c6; push address of WinExec()<br>
+  call ebx; call WinExec()<br>
+  mov eax, 0x77e55cb5; address of ExitProcess()<br>
+  call eax; call ExitProcess()<p>
    </i>
-
+The next steps will be:
+<ol>
+  <li>Compile the assembly code to binary</li>
+  <li>Extract opcodes with bin2sc script</li>
+  <li>Use the extracted code with C skeleton and compile it</li>
+  <li>Then we will have the executable to try!</li>
+  
+  </ol>
 <b>Nevertheless...</b> in this example we have hardcoded addresses, this means that if we run this binary in other systems won't work.
-What can we do in order to make this work?
+What can we do in order to make this work?<p>
+  
 
